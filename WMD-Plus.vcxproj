@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{E43525D1-276C-4FC9-BC76-FEA140F535B8}</ProjectGuid>
+    <RootNamespace>WMDPlus</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseDebugLibraries Condition="'$(Configuration)'=='Debug'">true</UseDebugLibraries>
+    <UseDebugLibraries Condition="'$(Configuration)'=='Release'">false</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="WMD-Plus.props" />
+  </ImportGroup>
+  <PropertyGroup>
+    <TargetName>dinput8</TargetName>
+    <OutDir Condition="'$(Configuration)'=='Release'">$(WmdPlusRoot)dist\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <ModuleDefinitionFile>$(ProjectDir)dinput8.def</ModuleDefinitionFile>
+      <ImportLibrary>$(IntDir)dinput8.lib</ImportLibrary>
+      <AdditionalOptions>/IGNORE:4222 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /y "$(ProjectDir)Plus.ini" "$(OutDir)Plus.ini" &gt;nul</Command>
+      <Message>Copying WMD-Plus configuration.</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="automatic.cpp" />
+    <!-- Included by automatic.cpp; compiling this twice would duplicate hooks. -->
+    <ClCompile Include="plus.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="settings.h" />
+    <ClInclude Include="hats.h" />
+    <ClInclude Include="unlock_all.h" />
+    <ClInclude Include="joanna_dark.h" />
+    <None Include="dinput8.def" />
+    <None Include="Plus.ini" />
+    <None Include="README.md" />
+    <None Include="package.py" />
+    <None Include="WMD-Plus.props" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WMD-Plus.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

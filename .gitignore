@@ -1,0 +1,30 @@
+# Build output and generated packages
+/build/
+/dist/
+*.dll
+*.exe
+*.obj
+*.lib
+*.exp
+*.pdb
+*.ilk
+*.zip
+*.log
+*.tlog/
+*.ipch
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Local game captures and extracted data
+*.dmp
+*.mdmp
+research/*
+
+# Visual Studio local state
+/.vs/
+*.vcxproj.user
+*.suo
+*.VC.db
+*.VC.opendb

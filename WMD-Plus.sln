@@ -1,0 +1,36 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WMD-Plus", "WMD-Plus.vcxproj", "{E43525D1-276C-4FC9-BC76-FEA140F535B8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HookTests", "tests\HookTests.vcxproj", "{449AB66D-6F91-4FD8-BBAE-A1E89FE48D44}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProxySmoke", "tests\ProxySmoke.vcxproj", "{91A389EF-2968-4F1E-AD59-4EE6072124AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E43525D1-276C-4FC9-BC76-FEA140F535B8}.Debug|x86.ActiveCfg = Debug|Win32
+		{E43525D1-276C-4FC9-BC76-FEA140F535B8}.Debug|x86.Build.0 = Debug|Win32
+		{E43525D1-276C-4FC9-BC76-FEA140F535B8}.Release|x86.ActiveCfg = Release|Win32
+		{E43525D1-276C-4FC9-BC76-FEA140F535B8}.Release|x86.Build.0 = Release|Win32
+		{449AB66D-6F91-4FD8-BBAE-A1E89FE48D44}.Debug|x86.ActiveCfg = Debug|Win32
+		{449AB66D-6F91-4FD8-BBAE-A1E89FE48D44}.Debug|x86.Build.0 = Debug|Win32
+		{449AB66D-6F91-4FD8-BBAE-A1E89FE48D44}.Release|x86.ActiveCfg = Release|Win32
+		{449AB66D-6F91-4FD8-BBAE-A1E89FE48D44}.Release|x86.Build.0 = Release|Win32
+		{91A389EF-2968-4F1E-AD59-4EE6072124AB}.Debug|x86.ActiveCfg = Debug|Win32
+		{91A389EF-2968-4F1E-AD59-4EE6072124AB}.Debug|x86.Build.0 = Debug|Win32
+		{91A389EF-2968-4F1E-AD59-4EE6072124AB}.Release|x86.ActiveCfg = Release|Win32
+		{91A389EF-2968-4F1E-AD59-4EE6072124AB}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A056C7A0-E50C-4254-B142-06DDDFCB1CD6}
+	EndGlobalSection
+EndGlobal
