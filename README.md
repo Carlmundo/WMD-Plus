@@ -21,7 +21,7 @@ Intended for offline play. Requires the Steam version on Windows.
 - Rapid Play - Removes lots of delays and pauses to speed up the game (also featured in [Worms 2 Plus](https://github.com/Carlmundo/W2-Plus))
 
 ## Install
-1. Download the zip file, extract it and copy the `dinput8.dll` and `Plus.ini` files into the game folder.
+1. [Download](https://github.com/Carlmundo/WMD-Plus/releases/download/1.0/WMD-Plus.zip) the zip file, extract it and copy the `dinput8.dll` and `Plus.ini` files into the game folder.
 2. Edit Plus.ini to enable the options you would like.
 
 ```ini
