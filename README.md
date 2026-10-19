@@ -1,6 +1,6 @@
 # WMD-Plus
 A mod for Worms W.M.D that skips intros and unlocks otherwise unusable content and adds a "Rapid Play" feature.
-Intended for offline play.
+Intended for offline play. Requires the Steam version on Windows.
 
 ## Features
 - Skip Intros
